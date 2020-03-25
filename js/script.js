@@ -29,13 +29,15 @@ let quotes = [
     quote: 'The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.',
     source: 'Dr. Martin Luther King Jr.',
     citation: 'The book - Strength to Love',
-    year: 1963},
+    year: 1963
+    },
 
   {
     quote: 'The Nation that destroys its soil destroys itself.',
     source: 'Franklin D. Roosevelt',
     citation: 'Letter to all State Governors on a Uniform Soil Conservation Law',
-    year: 1937},
+    year: 1937,
+    type: 'Political'},
 
   {
     quote: 'Logic is the beginning of wisdom, not the end.',
