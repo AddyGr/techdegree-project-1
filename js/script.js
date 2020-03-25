@@ -114,14 +114,16 @@ let getRandomQuote = () => {
 }
 
 /**
- * Function to generate and return a random color. Creates 3 random colors, 
+ * 1st Function to generate and return a random color. 
+ * 2nd function uses the randomColor function and creates 3 random colors, 
  * which are then combined into an rbg color (for use with the CSS
  * body "background-color"). 
  */
-let randomColor = () => {
-  let colorA = Math.floor(Math.random() * 256 );
-  let colorB = Math.floor(Math.random() * 256 );
-  let colorC = Math.floor(Math.random() * 256 );
+let randomColor = () => Math.floor(Math.random() * 256 );
+let randomFinalColor = () => {
+  let colorA = randomColor();
+  let colorB = randomColor();
+  let colorC = randomColor();
   let mixColor = `rgb(${colorA}, ${colorB}, ${colorC})`;
   return document.body.style.setProperty('background-color', mixColor);
 }
@@ -151,7 +153,7 @@ let printQuote = () => {
   htmlString += `</p>`;
   //Calls on the function randomColor(), to change the color of the background
   //whenever a random quote is generated.
-  randomColor(); 
+  randomFinalColor(); 
   return document.getElementById('quote-box').innerHTML = htmlString;
 }
 
@@ -168,8 +170,3 @@ let timer = setInterval(printQuote, 15000);
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
-
-//if(addEventListener("click",true)){
-//  let clearInterval(timer);
-//  timer = setInterval(printQuote, 10000);
-//}
